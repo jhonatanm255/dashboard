@@ -1,0 +1,248 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    margin: 30px 0 20px 0;
+    border-radius: 10px;
+    transition: all .5s ease;
+    display: block;
+}
+
+  .main-item{
+    display: flex;
+    width: auto;
+    height: 20px;
+    padding: 60px;
+    gap: 10px;
+    background-color: var(--light-mode-primary);
+    border-radius: 10px;
+    margin: 0 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  }
+
+  .dark-mode .main-item{
+    background: var(--dark-mode-primary);
+  }
+
+  .main-group{
+    padding: 10px;
+  }
+
+  .title{
+    margin-bottom: 30px;
+    color: var(--dark-mode-primary);
+  }
+
+  .dark-mode .title{
+    color: aliceblue;
+  }
+
+  .text-h4{
+    font-size: 16px;
+    margin: 20px 0;
+    font-weight: 300;
+    font-style: italic;
+  }
+ 
+  .dark-mode .span-h4{
+    color: rgb(90, 255, 200);
+  }
+
+  .light-mode .span-h4{
+    color: rgb(48, 48, 252);
+  }
+
+  /*  MAIN ITEM  */
+
+  .icon-item-main{
+    width: 100px;
+    height: 80px;
+    color: var(--color-primary);
+    background-color: var(--color-bg-primary);
+    padding: 5px;
+    border-radius: 5px;
+  }
+
+  .orders{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  .box-1{
+    background-color: var(--color-bg-primary);
+    color: var(--color-primary);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .box-2{
+    background-color: var(--color-bg-warning);
+    color: var(--color-warning);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .box-3{
+    background-color: var(--color-bg-success);
+    color: var(--color-success);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .box-4{
+    background-color: var(--color-bg-danger);
+    color: var(--color-danger);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .box{
+    list-style: none;
+  }
+
+  .bx{
+    font-size: 35px;
+  }
+
+  .info{
+    color: var(--dark-mode-primary);
+    margin-left: 20px;
+  }
+
+  .info-p{
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .caja{
+    margin-left: -10px;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--light-mode-primary);
+    padding: 20px;
+    border-radius: 10px;
+    transition: all .5s ease;
+    cursor: pointer;
+  }
+
+  .dark-mode .caja{
+    background-color: var(--dark-mode-primary);
+  }
+
+  .dark-mode .info{
+    color: aliceblue;
+  }
+
+  /*RECENT ORDERS*/
+
+  .main-order{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 40px;
+    gap: 20px;
+  }
+
+  .dark-mode .recent-order{
+    background-color: var(--dark-mode-primary);
+    color: aliceblue;
+  }
+
+  .recent-order{
+    background-color: var(--light-mode-primary);
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: var(--dark-mode-primary);
+    transition: all.5s ease;
+  }
+
+  .item-order-1{
+    font-size: 20px;
+    font-weight: 200;
+    display: flex;
+  }
+
+  .order-h3{
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: 200;
+    margin-left: 10px;
+  }
+
+  .main-order .recent-order i{
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .item-order-2{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+  }
+
+  .remiders{
+    height: 400px;
+    background-color: var(--light-mode-primary);
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: var(--dark-mode-primary);
+    margin-right: 10px;
+    transition: all.5s ease;
+  }
+
+  .dark-mode .remiders{
+    background-color: var(--dark-mode-primary);
+    color: aliceblue;
+  }
+
+  .item-remiders{
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+  }
+
+  .recent-remiders{
+    display: flex;
+  }
+
+  .recent-remiders i{
+    font-size: 20px;
+    font-weight: 200;
+    display: flex;
+    padding: 10px;
+  }
+
+  .remiders-h3{
+    margin-top: -5px;
+    font-size: 18px;
+    font-weight: 200;
+    padding: 10px;
+  }
+
+  .item-remiders i{
+    font-size: 20px;
+    padding: 10px;
+    
+  }
+
+  .titulos{
+    display: flex;
+    justify-content: space-between;
+    color: var(--dark-mode-primary);
+  }
+
+
+  
+
+
+  
+
+
+
+  

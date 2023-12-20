@@ -1,0 +1,40 @@
+
+
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    background-color: #3e3e3e;
+    transition: all .5s ease;
+  }
+  
+  .logo > a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    margin: 5px 20px;
+    color: aliceblue;
+    font-weight: 100;
+  }
+  
+  .nav-item{
+    display: flex;
+    margin: 10px 20px;
+    list-style: none;
+    margin-right: 60px;
+    margin-top: 25px;
+  }
+  
+  .item > a{
+    text-decoration: none;
+    color: aliceblue;
+    margin-right: 30px;
+    font-size: 16px;
+    font-weight: 200;
+  }
+  
+  .item > a:hover{
+    border-bottom: solid 1px aliceblue;
+  }
+  
