@@ -10,7 +10,6 @@
     border-radius: 10px;
     height: 100px;
     box-shadow: var(--box-shadow);
-    margin-right: 10px;
     transition: all .5s ease;
 }
 
