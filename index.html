@@ -1,314 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="style.css">
-  <script defer src="index.js"></script>
-  <!--Google Font-->
-  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;1,100;1,200;1,500&family=Quicksand:wght@300;400;500&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dashboard</title>
+      <link rel="stylesheet" href="style.css">
+      <script defer src="index.js"></script>
+      <!--Google Font-->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;1,100;1,200;1,500&family=Quicksand:wght@300;400;500&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 
-<body class="light-mode">
-  <div class="principal">
-    <!--NAVIGATON-->
-    <div class="navegacion light-nav">
-      <div class="logo"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-            <path
-              d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6" />
-          </svg></a></div>
-          <div class="search">
-            <input class="search" type="search" name="busqueda" id="busqueda" placeholder="Search"><button class="btn-search">Buscar</button>
-          </div>
-      <div class="nav-bar">
-        <ul class="nav-item">
-          <button class="btn-toggle" id="toggle-mode">
-            <div class="radio"></div>
-          </button>
-          <li class="item"><a href="#">Home</a></li>
-          <li class="item"><a href="#">Abaut</a></li>
-          <li class="item"><a href="#">Social</a></li>
-          <li class="item"><a href="#">Contact</a></li>
+  <body class="light-mode">
+    <div class="principal">
+        <!--NAVIGATON-->
+        <div class="navegacion light-nav">
+          <div class="logo"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+                <path
+                  d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6" />
+              </svg></a></div>
+              <div class="search">
+                <input class="search" type="search" name="busqueda" id="busqueda" placeholder="Search"><button class="btn-search">Buscar</button>
+              </div>
+          <div class="nav-bar">
+            <ul class="nav-item">
+              <button class="btn-toggle" id="toggle-mode">
+                <div class="radio"></div>
+              </button>
+              <div id="btn-h" class="menu-hamburguesa">
+                <i class='bx bx-menu'></i>
+              </div>
+              <li class="item"><a href="#">Home</a></li>
+              <li class="item"><a href="#">Abaut</a></li>
+              <li class="item"><a href="#">Social</a></li>
+              <li class="item"><a href="#">Contact</a></li>
 
-        </ul>
-      </div>
-    </div>
-  </div>
-  <!--ASIDE-->
-  <div class="content">
-    <div class="light-mode aside">
-      <ul class="item-list">
-        <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-              fill="currentColor" class="icon-item" viewBox="0 0 16 16">
-              <path
-                d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z" />
-            </svg></a>Dashboard</li>
-        <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-              fill="currentColor" class="icon-item" viewBox="0 0 16 16">
-              <path
-                d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
-              <path
-                d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z" />
-            </svg></i></a>Building</li>
-        <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-              fill="currentColor" class="icon-item" viewBox="0 0 16 16">
-              <path
-                d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
-              <path
-                d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
-            </svg></i></a>Market</li>
-        <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-              fill="currentColor" class="icon-item" viewBox="0 0 16 16">
-              <path fill-rule="evenodd"
-                d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
-            </svg></i></a>Analitycs</li>
-        <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-              fill="currentColor" class="icon-item" viewBox="0 0 16 16">
-              <path
-                d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5m16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0m-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674z" />
-            </svg></i></a>Trading Orders</li>
-        <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-              fill="currentColor" class="icon-item" viewBox="0 0 16 16">
-              <path
-                d="M10 13.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm-2.5.5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5zm-3 0a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5z" />
-              <path
-                d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
-            </svg></i></a>Orders Sales</li>
-        <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-              fill="currentColor" class="icon-item" viewBox="0 0 16 16">
-              <path
-                d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
-            </svg></i></a>Recent Orders</li>
-      </ul>
-      <ul>
-        <li>
-        <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-              fill="currentColor" class="icon-item logout" viewBox="0 0 16 16">
-              <path
-                d="M8.538 1.02a.5.5 0 1 0-.076.998 6 6 0 1 1-6.445 6.444.5.5 0 0 0-.997.076A7 7 0 1 0 8.538 1.02Z" />
-              <path
-                d="M7.096 7.828a.5.5 0 0 0 .707-.707L2.707 2.025h2.768a.5.5 0 1 0 0-1H1.5a.5.5 0 0 0-.5.5V5.5a.5.5 0 0 0 1 0V2.732z" />
-            </svg></i></a>
-          <p class="logout">Logout</p>
-        </li>
-        </li>
-      </ul>
-    </div>
-    <!--BOX INFORMATIONS-->
-    <div class="main">
-      <div class="title dark-mode">
-        <div>
-          <h1 class="title-h1">Dashboard</h1>
-          <h4 class="text-h4">Analitycs / <span class="dark-mode span-h4">shop</span></h4>
-        </div>
-        <div class="download">
-          <div class="download-icon"><i class='bx bx-cloud-download'></i><span class="span-download">Download SCV</span>
+            </ul>
           </div>
         </div>
       </div>
-      <div class="main-group">
-        <ul class="orders">
-          <div class="caja">
-            <li class="box box-1"><i class='bx bx-calendar-check'></i></li>
-            <span class="info">
-              <h3>1,740</h3>
-              <p class="info-p">Paid Orders</p>
-            </span>
+      <!--ASIDE-->
+      <div class="content">
+        <div class="light-mode aside active-menu">
+          <ul class="item-list">
+            <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  fill="currentColor" class="icon-item" viewBox="0 0 16 16">
+                  <path
+                    d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z" />
+                </svg></a><span class="lkn">Dashboard</span></li>
+            <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  fill="currentColor" class="icon-item" viewBox="0 0 16 16">
+                  <path
+                    d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM7.5 5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zM4.5 8a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm2.5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z" />
+                  <path
+                    d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3z" />
+                </svg></i></a><span class="lkn">Building</span></li>
+            <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  fill="currentColor" class="icon-item" viewBox="0 0 16 16">
+                  <path
+                    d="M11.354 6.354a.5.5 0 0 0-.708-.708L8 8.293 6.854 7.146a.5.5 0 1 0-.708.708l1.5 1.5a.5.5 0 0 0 .708 0l3-3z" />
+                  <path
+                    d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0m7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0" />
+                </svg></i></a><span class="lkn">Market</span></li>
+            <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  fill="currentColor" class="icon-item" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd"
+                    d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5" />
+                </svg></i></a><span class="lkn">Analitycs</span></li>
+            <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  fill="currentColor" class="icon-item" viewBox="0 0 16 16">
+                  <path
+                    d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5m16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0m-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674z" />
+                </svg></i></a><span class="lkn">Trading Orders</span></li>
+            <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  fill="currentColor" class="icon-item" viewBox="0 0 16 16">
+                  <path
+                    d="M10 13.5a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5zm-2.5.5a.5.5 0 0 1-.5-.5v-4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5zm-3 0a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5z" />
+                  <path
+                    d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
+                </svg></i></a><span class="lkn">Orders Sales</span></li>
+            <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  fill="currentColor" class="icon-item" viewBox="0 0 16 16">
+                  <path
+                    d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
+                </svg></i></a ><span class="lkn">Recent Orders</span></li>
+          </ul>
+          <ul>
+            <li>
+            <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                  fill="currentColor" class="icon-item logout" viewBox="0 0 16 16">
+                  <path
+                    d="M8.538 1.02a.5.5 0 1 0-.076.998 6 6 0 1 1-6.445 6.444.5.5 0 0 0-.997.076A7 7 0 1 0 8.538 1.02Z" />
+                  <path
+                    d="M7.096 7.828a.5.5 0 0 0 .707-.707L2.707 2.025h2.768a.5.5 0 1 0 0-1H1.5a.5.5 0 0 0-.5.5V5.5a.5.5 0 0 0 1 0V2.732z" />
+                </svg></i></a>
+              <p class="logout"><span class="lkn">Logout</span></p>
+            </li>
+            </li>
+          </ul>
+        </div>
+        <!--BOX INFORMATIONS-->
+        <div class="main">
+          <div class="title dark-mode">
+            <div>
+              <h1 class="title-h1">Dashboard</h1>
+              <h4 class="text-h4">Analitycs / <span class="dark-mode span-h4">shop</span></h4>
+            </div>
+            <div class="download">
+              <div class="download-icon"><i class='bx bx-cloud-download'></i><span class="span-download">Download SCV</span>
+              </div>
+            </div>
           </div>
-          <div class="caja">
-            <li class="box box-2"><i class='bx bx-show-alt'></i></li>
-            <span class="info">
-              <h3>3,120</h3>
-              <p class="info-p">Recents Visits</p>
-            </span>
-          </div>
-          <div class="caja">
-            <li class="box box-3"><i class='bx bx-bar-chart'></i></i></li>
-            <span class="info">
-              <h3>10,400</h3>
-              <p class="info-p">Stadistics Plan</p>
-            </span>
-          </div>
-          <div class="caja">
-            <li class="box box-4"><i class='bx bx-dollar-circle'></i></li>
-            <span class="info">
-              <h3>38,940 M</h3>
-              <p class="info-p">Total Sales Build</p>
-            </span>
-          </div>
+          <div class="main-group">
+            <ul class="orders">
+              <div class="caja">
+                <li class="box box-1"><i class='bx bx-calendar-check'></i></li>
+                <span class="info">
+                  <h3>1,740</h3>
+                  <p class="info-p">Paid Orders</p>
+                </span>
+              </div>
+              <div class="caja">
+                <li class="box box-2"><i class='bx bx-show-alt'></i></li>
+                <span class="info">
+                  <h3>3,120</h3>
+                  <p class="info-p">Recents Visits</p>
+                </span>
+              </div>
+              <div class="caja">
+                <li class="box box-3"><i class='bx bx-bar-chart'></i></i></li>
+                <span class="info">
+                  <h3>10,400</h3>
+                  <p class="info-p">Stadistics Plan</p>
+                </span>
+              </div>
+              <div class="caja">
+                <li class="box box-4"><i class='bx bx-dollar-circle'></i></li>
+                <span class="info">
+                  <h3>38,940 M</h3>
+                  <p class="info-p">Total Sales Build</p>
+                </span>
+              </div>
 
-          <div class="caja">
-            <li class="box box-5"><i class='bx bxs-doughnut-chart'></i></i></li>
-            <span class="info">
-              <h3>11.24 %</h3>
-              <p class="info-p">Data Full Analitycs </p>
-            </span>
+              <div class="caja">
+                <li class="box box-5"><i class='bx bxs-doughnut-chart'></i></i></li>
+                <span class="info">
+                  <h3>11.24 %</h3>
+                  <p class="info-p">Data Full Analitycs </p>
+                </span>
+              </div>
+            </ul>
           </div>
-        </ul>
-      </div>
-      </di>
-      <!--RECENT ORDERS-->
-      <div class="data">
-        <div class="content-recent">
-          <div class="header">
-              <div class="item-1">
-                  <i class='bx bx-receipt'></i>
-                  <h3 class="header-recent">Recent Orders</h3>
+          </di>
+          <!--RECENT ORDERS-->
+          <div class="data">
+            <div class="content-recent">
+              <div class="header">
+                  <div class="item-1">
+                      <i class='bx bx-receipt'></i>
+                      <h3 class="header-recent">Recent Orders</h3>
+                  </div>
+                  <div class="item-2">
+                      <i class='bx bx-filter'></i>
+                      <i class='bx bx-search'></i>
+                  </div>
               </div>
-              <div class="item-2">
-                  <i class='bx bx-filter'></i>
-                  <i class='bx bx-search'></i>
+              <div class="info-order">
+                  <p>User</p>
+                  <p>Order Date</p>
+                  <p>Status</p>
               </div>
-          </div>
-          <div class="info-order">
-              <p>User</p>
-              <p>Order Date</p>
-              <p>Status</p>
-          </div>
-          <hr class="thin">
-          <div class="datos">
-              <div class="dato-1">
-                  <img class="pic" src="img/persona-2.png" alt=""><p>Jhonatan Muñoz</p>
+              <hr class="thin">
+              <div class="datos">
+                  <div class="dato-1">
+                      <img class="pic" src="img/persona-2.png" alt=""><p>Jhonatan Muñoz</p>
+                  </div>
+                  <div class="fecha">14-10-2023</div>
+                  <div class="status">
+                      <p class="span-1">Completed</p>
+                  </div>
               </div>
-              <div class="fecha">14-10-2023</div>
-              <div class="status">
-                  <p class="span-1">Completed</p>
+              <div class="datos">
+                  <div class="dato-1">
+                      <img class="pic" src="img/persona-4.png" alt=""><p>Diana Rondon</p>
+                  </div>
+                  <div class="fecha">15-11-2023</div>
+                  <div class="status">
+                      <p class="span-2">Pending</p>
+                  </div>
               </div>
-          </div>
-          <div class="datos">
-              <div class="dato-1">
-                  <img class="pic" src="img/persona-4.png" alt=""><p>Diana Rondon</p>
+              <div class="datos">
+                  <div class="dato-1">
+                    <img class="pic" src="img/persona-1.png" alt=""><p>Isabella Sofia</p>
+                  </div>
+                  <div class="fecha">22-12-2023</div>
+                  <div class="status">
+                      <p class="span-3">Prossesing</p>
+                  </div>
               </div>
-              <div class="fecha">15-11-2023</div>
-              <div class="status">
-                  <p class="span-2">Pending</p>
-              </div>
-          </div>
-          <div class="datos">
-              <div class="dato-1">
-                <img class="pic" src="img/persona-1.png" alt=""><p>Isabella Sofia</p>
-              </div>
-              <div class="fecha">22-12-2023</div>
-              <div class="status">
-                  <p class="span-3">Prossesing</p>
-              </div>
-          </div>
-        </div>
+            </div>
 
-        <!--REMIDERS-->
+            <!--REMIDERS-->
 
-        <div class="content-recent-2">
-          <div class="header-2">
-              <div class="item-1">
-                <i class='bx bx-spreadsheet'></i>
-                  <h3 class="header-recent">Remiders</h3>
+            <div class="content-recent-2">
+              <div class="header-2">
+                  <div class="item-1">
+                    <i class='bx bx-spreadsheet'></i>
+                      <h3 class="header-recent">Remiders</h3>
+                  </div>
+                  <div class="item-2">
+                      <i class='bx bx-filter'></i>
+                      <i class='bx bx-plus'></i>
+                  </div>
               </div>
-              <div class="item-2">
-                  <i class='bx bx-filter'></i>
-                  <i class='bx bx-plus'></i>
+              <hr class="thin">
+              <div class="datos-2">
+                  <div class="dato-1">
+                    <i class='bx bx-check-circle'></i><p>Start Our Meeting</p>
+                  </div>
+                  <div class="status">
+                    <i class='bx bx-dots-vertical-rounded'></i>
+                  </div>
+              </div>
+              <div class="datos-2">
+                  <div class="dato-1">
+                    <i class='bx bx-check-circle'></i></i><p>Analyse Our Site</p>
+                  </div>
+                  <div class="status">
+                    <i class='bx bx-dots-vertical-rounded'></i>
+                  </div>
+              </div>
+              <div class="datos-3">
+                  <div class="dato-1">
+                    <i class='bx bx-x-circle'></i></i><p>Analyser the Dashboard</p>
+                  </div>
+                  <div class="status">
+                    <i class='bx bx-dots-vertical-rounded'></i>
+                  </div>
               </div>
           </div>
-          <hr class="thin">
-          <div class="datos-2">
-              <div class="dato-1">
-                <i class='bx bx-check-circle'></i><p>Start Our Meeting</p>
-              </div>
-              <div class="status">
-                <i class='bx bx-dots-vertical-rounded'></i>
-              </div>
-          </div>
-          <div class="datos-2">
-              <div class="dato-1">
-                <i class='bx bx-check-circle'></i></i><p>Analyse Our Site</p>
-              </div>
-              <div class="status">
-                <i class='bx bx-dots-vertical-rounded'></i>
-              </div>
-          </div>
-          <div class="datos-3">
-              <div class="dato-1">
-                <i class='bx bx-x-circle'></i></i><p>Analyser the Dashboard</p>
-              </div>
-              <div class="status">
-                <i class='bx bx-dots-vertical-rounded'></i>
-              </div>
-          </div>
-      </div>
-    </div>
-    <div class="price">
-        <div class="item-price">
-          <img class="item-img" src="img/btc-logo.png" alt="btc-img">
-          <p class="info-price">Bitcoin BTC</p>
-          <P class="info-price">Price: 43.729 $</P>
-          <p class="info-price">24h: <span class="green">+ 3.76%</span></p>
         </div>
-  
-        <div class="item-price">
-          <img class="item-img" src="img/eth-logo.png" alt="btc-img">
-          <p class="info-price">Ethereum ETH</p>
-          <P class="info-price">Price: 2.303 $</P>
-          <p class="info-price">24h: <span class="green">+ 3.50%</span></p>
-        </div>
-    
-        <div class="item-price">
-          <img class="item-img" src="img/ada-logo.png" alt="btc-img">
-          <p class="info-price">Cardano ADA</p>
-          <P class="info-price">Price: 0.615 $</P>
-          <p class="info-price">24h: <span class="red">-0.95%</span></p>
-        </div>
-     
-        <div class="item-price">
-          <img class="item-img" src="img/polkadot-new-dot-logo.png" alt="btc-img">
-          <p class="info-price">Polkadot DOT</p>
-          <P class="info-price">Price: 8.58 $</P>
-          <p class="info-price">24h: <span class="green">+ 20.55%</span></p>
-        </div>
-    
-        <div class="item-price">
-          <img class="item-img" src="img/bnb-logo.png" alt="btc-img">
-          <p class="info-price">BNB BNB</p>
-          <P class="info-price">Price: 271,85 $</P>
-          <p class="info-price">24h: <span class="green">+ 11.56%</span></p>
-        </div>
+        <div class="price">
+            <div class="item-price">
+              <img class="item-img" src="img/btc-logo.png" alt="btc-img">
+              <p class="info-price">Bitcoin BTC</p>
+              <P class="info-price">Price: 43.729 $</P>
+              <p class="info-price">24h: <span class="green">+ 3.76%</span></p>
+            </div>
       
-        <div class="item-price">
-          <img class="item-img" src="img/solana-logo.png" alt="btc-img">
-          <p class="info-price">Solana SOL</p>
-          <P class="info-price">Price: 109.23 $</P>
-          <p class="info-price">24h: <span class="green">+ 48.74%</span></p>
-        </div>
+            <div class="item-price">
+              <img class="item-img" src="img/eth-logo.png" alt="btc-img">
+              <p class="info-price">Ethereum ETH</p>
+              <P class="info-price">Price: 2.303 $</P>
+              <p class="info-price">24h: <span class="green">+ 3.50%</span></p>
+            </div>
+        
+            <div class="item-price">
+              <img class="item-img" src="img/ada-logo.png" alt="btc-img">
+              <p class="info-price">Cardano ADA</p>
+              <P class="info-price">Price: 0.615 $</P>
+              <p class="info-price">24h: <span class="red">-0.95%</span></p>
+            </div>
+        
+            <div class="item-price">
+              <img class="item-img" src="img/polkadot-new-dot-logo.png" alt="btc-img">
+              <p class="info-price">Polkadot DOT</p>
+              <P class="info-price">Price: 8.58 $</P>
+              <p class="info-price">24h: <span class="green">+ 20.55%</span></p>
+            </div>
+        
+            <div class="item-price">
+              <img class="item-img" src="img/bnb-logo.png" alt="btc-img">
+              <p class="info-price">BNB BNB</p>
+              <P class="info-price">Price: 271,85 $</P>
+              <p class="info-price">24h: <span class="green">+ 11.56%</span></p>
+            </div>
+          
+            <div class="item-price">
+              <img class="item-img" src="img/solana-logo.png" alt="btc-img">
+              <p class="info-price">Solana SOL</p>
+              <P class="info-price">Price: 109.23 $</P>
+              <p class="info-price">24h: <span class="green">+ 48.74%</span></p>
+            </div>
 
-        <div class="item-price">
-          <img class="item-img" src="img/usdt-logo.png" alt="btc-img">
-          <p class="info-price">Tether USDT</p>
-          <P class="info-price">Price: 1.00 $</P>
-          <p class="info-price">24h: <span class="green">+ 0.14%</span></p>
-        </div>
+            <div class="item-price">
+              <img class="item-img" src="img/usdt-logo.png" alt="btc-img">
+              <p class="info-price">Tether USDT</p>
+              <P class="info-price">Price: 1.00 $</P>
+              <p class="info-price">24h: <span class="green">+ 0.14%</span></p>
+            </div>
 
-        <div class="item-price">
-          <img class="item-img" src="/img/shiba-inu-logo.png" alt="btc-img">
-          <p class="info-price">Shiba Inu SHIB</p>
-          <P class="info-price">Price: 0.00001095 $</P>
-          <p class="info-price">24h: <span class="red">- 2.64%</span></p>
+            <div class="item-price">
+              <img class="item-img" src="/img/shiba-inu-logo.png" alt="btc-img">
+              <p class="info-price">Shiba Inu SHIB</p>
+              <P class="info-price">Price: 0.00001095 $</P>
+              <p class="info-price">24h: <span class="red">- 2.64%</span></p>
+            </div>
+          </div>
         </div>
-      </div>
     </div>
-  </div>
 
-<!--FOOTER-->
-<div class="footer">
-  
-</div>
+      <!--FOOTER
+      <div class="footer">
+      
+      </div>
+      -->
 
-</body>
+  </body>
 </html>

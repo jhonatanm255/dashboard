@@ -1,115 +1,120 @@
+.navegacion {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  background-color: var(--dark-mode-primary);
+  transition: all 0.5s ease;
+  box-shadow: var(--box-shadow);
+  border-radius: 10px;
+}
 
+.logo > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  margin: 5px 20px;
+  color: aliceblue;
+  font-weight: 100;
+}
 
-.navegacion{
-    display: flex;
-    justify-content: space-between;
-    padding: 5px;
-    background-color: var(--dark-mode-primary);
-    transition: all .5s ease;
-    box-shadow: var(--box-shadow);
-    border-radius: 10px;
-  }
-  
-  .logo > a{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-    margin: 5px 20px;
-    color: aliceblue;
-    font-weight: 100;
-  }
-  
-  .nav-item{
-    display: flex;
-    margin: 10px 20px;
-    list-style: none;
-    margin-right: 60px;
-    margin-top: 25px;
-  }
-  
-  .item > a{
-    text-decoration: none;
-    color: aliceblue;
-    margin-right: 30px;
-    font-size: 16px;
-    font-weight: 200;
-  }
-  
-  .item > a:hover{
-    border-bottom: solid 1px aliceblue;
-  }
+.nav-item {
+  display: flex;
+  margin: 10px 20px;
+  list-style: none;
+  margin-right: 10px;
+  margin-top: 25px;
+}
 
-  .search{
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    width: 500px;
-    height: 30px;
-    border-radius: 15px 0 0 15px;
-    border: none;
-    padding-left: 10px;
-    outline: none;
-  }
+.item > a {
+  text-decoration: none;
+  color: aliceblue;
+  margin-right: 30px;
+  font-size: 16px;
+  font-weight: 200;
+}
 
-  .dark-mode .search{
-    background-color: rgb(52, 52, 52);
-    color: aliceblue;
-    border-radius: 15px;
-  }
+.item > a:hover {
+  border-bottom: solid 1px aliceblue;
+}
 
-  .btn-search{
-    background-color: none;
-    border: none;
-    font-weight: 300;
-    border-radius: 0 15px 15px 0;
-    background-color: rgba(0, 0, 0, .3);
-    color: aliceblue;
-    padding: 0 15px;
-    cursor: pointer;
-    height: 30px;
-  }
+.item{
+  display: block;
+}
 
-  .dark-mode .btn-search{
-    background-color: var(--color-primary);
-  }
+.menu-hamburguesa{
+  color: aliceblue;
+  margin-right: 5px;
+  display: none;
+}
 
-  /*BOTON DARK MODE*/
+.search {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  width: 500px;
+  height: 30px;
+  border-radius: 15px 0 0 15px;
+  border: none;
+  padding-left: 10px;
+  outline: none;
+}
 
-  .btn-toggle {
-    position: relative;
-    margin-right: 20px;
-    padding: 5px 25px;
-    border-radius: 25px;
-    border: none;
-    box-shadow: inset 4px 4px 6px #858585, inset 4px 4px 6px #fff;
-    cursor: pointer;
-    transition: box-shadow 0.3s ease;
-  }
-  
-  .radio {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    border-radius: 25px;
-    background-color: #2543ee;
-    top: 0;
-    left: 0;
-    transform: scale(.7);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-  }
-  
-  .dark-mode .btn-toggle {
-    box-shadow: inset 4px 4px 6px #fff, inset 4px 4px 6px #858585;
-  }
-  
-  .dark-mode .radio {
+.dark-mode .search {
+  background-color: rgb(52, 52, 52);
+  color: aliceblue;
+  border-radius: 15px;
+}
 
-    transform: translateX(100%) scale(.7);
-    display: flex;
-    align-items: center;
-    background-color: #1f1f1f;
-  }
-  
+.btn-search {
+  background-color: none;
+  border: none;
+  font-weight: 300;
+  border-radius: 0 15px 15px 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: aliceblue;
+  padding: 0 15px;
+  cursor: pointer;
+  height: 30px;
+}
 
-  
+.dark-mode .btn-search {
+  background-color: var(--color-primary);
+}
+
+/*BOTON DARK MODE*/
+
+.btn-toggle {
+  position: relative;
+  margin-right: 20px;
+  padding: 5px 25px;
+  border-radius: 25px;
+  border: none;
+  box-shadow: inset 4px 4px 6px #858585, inset 4px 4px 6px #fff;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.radio {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #2543ee;
+  top: 0;
+  left: 0;
+  transform: scale(0.7);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dark-mode .btn-toggle {
+  box-shadow: inset 4px 4px 6px #fff, inset 4px 4px 6px #858585;
+}
+
+.dark-mode .radio {
+  transform: translateX(100%) scale(0.7);
+  display: flex;
+  align-items: center;
+  background-color: #1f1f1f;
+}

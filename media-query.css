@@ -1,0 +1,87 @@
+
+
+@media screen and (max-width: 425px) {
+
+    .search{
+        display: none;
+    }
+
+    .item{
+        display: none;
+    }
+
+    .menu-hamburguesa{
+        display: flex;
+        align-items: center;
+        margin-right: 5px;
+    }
+
+    .navegacion{
+        width: 100%;
+    }
+
+    .title{
+        display: block;
+    }
+    
+    .aside {
+        display: block;
+        position: absolute;
+        margin-left: 10px;
+        left: -100%;
+        width: auto;
+        height: auto;
+        background: var(--light-mode-primary);
+        border-radius: 10px;
+        box-shadow: var(--box-shadow);
+        transition: left 0.5s ease; /* Agrega una transición para un efecto suave */
+        z-index: 100;
+      }
+
+      .active-menu  .aside {
+        left: 0%;
+      }
+      
+      
+    .orders{
+        display: block;
+    }
+
+    .caja{
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .data{
+        display: block;
+        
+    }
+
+    .content-recent{
+        width: 100%;
+    }
+
+    .content-recent-2{
+        width: 100%;
+        height: 50vh;
+    }
+
+    .price{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        height: auto;
+    }
+
+    .btn-toggle {
+        margin-right: 20px;
+        width: auto;
+        height: 25px;
+
+    }
+
+
+    
+
+}
+    
