@@ -3,16 +3,23 @@
   align-items: center;
   justify-content: space-between;
   margin-top: 10px;
-  padding: 10px;
   background-color: var(--light-mode-primary);
   border-radius: 10px;
   height: 100px;
   box-shadow: var(--box-shadow);
   transition: all 0.5s ease;
+  height: 20vh;
 }
 
 .item-price {
-  margin: 5px 20px;
+  margin: 5px 10px;
+  transition: all .5s ease;
+  padding: 20px;
+}
+
+.item-price:hover{
+  background-color: rgba(0, 0, 0, .2);
+  border-radius: 10px;
 }
 
 .item-img {

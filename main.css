@@ -180,7 +180,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin-top: 40px;
-  gap: 20px;
+  gap: 10px;
 }
 
 .dark-mode .recent-order {
@@ -284,7 +284,6 @@
   background-color: var(--light-mode-primary);
   box-shadow: var(--box-shadow);
   border-radius: 10px;
-  margin-top: 15px;
   transition: all 0.5s ease;
 }
 
@@ -389,10 +388,10 @@ hr.thin {
   font-family: "sans-serif";
   font-weight: 100;
   width: 40%;
+  height: 50vh;
   background-color: var(--light-mode-primary);
   box-shadow: var(--box-shadow);
   border-radius: 10px;
-  margin-top: 15px;
   transition: all 0.5s ease;
 }
 
@@ -440,8 +439,10 @@ hr.thin {
 
 .dark-mode .datos-2 {
   background: rgb(52, 52, 52);
+  transition: all 0.5 ease;
 }
 
 .dark-mode .datos-3 {
   background: rgb(52, 52, 52);
+  transition: all 0.5 ease;
 }
