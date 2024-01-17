@@ -1,8 +1,9 @@
 .footer {
   width: 100%;
-  height: 300px;
-  background-color: rgb(219, 219, 219);
+  height: 250px;
+  background-color: #184aff;
   border-radius: 10px;
+  box-shadow: var(--box-sahdow);
 }
 
 .dark-mode .footer {

@@ -1,6 +1,6 @@
 
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 490px) {
 
 
     .search{
@@ -35,7 +35,7 @@
         background: var(--light-mode-primary);
         border-radius: 10px;
         box-shadow: var(--box-shadow);
-        transition: left 0.5s ease; /* Agrega una transición para un efecto suave */
+        transition: left 0.5s ease;
         z-index: 100;
       }
 
@@ -97,8 +97,13 @@
 
 
 
-@media screen and (min-width: 476px) and (max-width: 600px){
+@media screen and (min-width: 491px) and (max-width: 600px){
 
+    .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 
     .item{
         display: none;
