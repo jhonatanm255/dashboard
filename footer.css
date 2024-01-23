@@ -1,11 +1,156 @@
 .footer {
   width: 100%;
-  height: 250px;
-  background-color: #184aff;
+  height: auto;
+  background-color: rgb(87, 87, 255);
   border-radius: 10px;
   box-shadow: var(--box-sahdow);
 }
 
 .dark-mode .footer {
   background-color: var(--dark-mode-primary);
+  color: aliceblue;
 }
+
+.footer a{
+  display: block;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.footer a:hover{
+  color: rgb(167, 167, 167);
+}
+
+.footer h3{
+  color: aliceblue;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.content-footer{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 30px 20px;
+  justify-content: space-around;
+}
+
+.sing-account{
+  padding: 10px;
+  width: 80%;
+  border: solid 1px white;
+  border-radius: 30px;
+  text-align: center;
+}
+
+a.sing-account{
+  font-size: 16px;
+  font-weight: 350;
+}
+
+a.sing-account:hover{
+  color: white;
+}
+
+.sing-account:hover{
+  background-color: rgba(0, 0, 0, .2);
+}
+
+.sing-in{
+  padding: 10px;
+  width: 80%;
+  border: solid 1px white;
+  border-radius: 30px;
+  text-align: center;
+  background-color: rgb(255, 255, 255);
+  color: rgb(87, 87, 255);
+  margin-top: 10px;
+}
+
+.sing-in:hover{
+  background-color: rgba(255, 255, 255, .7);
+  color: rgb(87, 87, 255);
+}
+
+a.sing-in{
+  color: rgb(87, 87, 255);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a.sing-in:hover{
+  color: rgb(87, 87, 255);
+}
+
+.column-1{
+  margin: 30px 0 0 20px;
+}
+
+.community{
+ display: flex;
+ margin-left: 50px;
+ margin-top: 20px;
+ font-size: 18px;
+}
+
+.icon-social{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 60%;
+  margin-left: 35px;
+  }
+
+  .icon-social i{
+    font-size: 26px;
+    justify-content: space-around;
+  }
+
+  .column{
+    margin: auto;
+  }
+
+  .foot-legal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+  }
+
+  .foot-legal a{
+    margin-right: 15px;
+    font-size: 12px;
+  }
+
+  .foot-legal a:hover{
+    color: aliceblue;
+    border-bottom: solid 1px aliceblue;
+  }
+
+  .link-legal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .copyright{
+    color: aliceblue;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  .app-store{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .app-store i{
+    font-size: 24px;
+  }
+
+  .app-store a:hover{
+    border: none;
+  }

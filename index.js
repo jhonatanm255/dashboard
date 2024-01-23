@@ -17,13 +17,11 @@ toggleButton.addEventListener('click', () => {
 
 
 // ENDPOINT PARA EL PRECIO DE LAS CRIPTOS
-function createSocket(symbol) {
+function createSocket(symbol, isDarkMode) {
     const tradeSocket = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}@trade`);
     const tickerSocket = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}@ticker`);
-
     const stockPriceElement = document.getElementById(`${symbol.toLowerCase()}-price`);
     const volumenSpan = document.getElementById(`${symbol.toLowerCase()}-volumen`);
-
     let lastPrice = null;
 
     // Manejar eventos para la conexión WebSocket de trades
@@ -31,18 +29,21 @@ function createSocket(symbol) {
         const stockObject = JSON.parse(event.data);
         const price = parseFloat(stockObject.p).toFixed(2);
         stockPriceElement.innerText = `Price: ${price} $`;
-        stockPriceElement.style.color = !lastPrice || lastPrice === price ? 'black' : price > lastPrice ? 'green' : 'red';
         lastPrice = price;
     };
 
     // Manejar eventos para la conexión WebSocket de ticker
     tickerSocket.onmessage = (event) => {
         const tickerData = JSON.parse(event.data);
-        volumenSpan.innerText = `Vol 24h: ${tickerData.P} %`;
+        const volumeChange = parseFloat(tickerData.P);
+        volumenSpan.innerHTML = `<span style="color: ${isDarkMode ? 'white' : 'black'};">Vol 24h:</span> ${volumeChange} %`;
+        volumenSpan.style.color = volumeChange > 0 ? (isDarkMode ? 'white' : 'green') : (volumeChange < 0 ? (isDarkMode ? 'white' : 'red') : '');
     };
 
     return { tradeSocket, tickerSocket };
 }
+
+
 
 // Lista de criptomonedas que deseas seguir
 const cryptoSymbols = ['ethusdt', 'btcusdt', 'adausdt', 'dotusdt', 'bnbusdt', 'solusdt','ltcusdt', 'avaxusdt'];
@@ -54,3 +55,10 @@ const cryptoSockets = {};
 cryptoSymbols.forEach(symbol => {
     cryptoSockets[symbol] = createSocket(symbol);
 });
+
+
+
+
+
+
+
