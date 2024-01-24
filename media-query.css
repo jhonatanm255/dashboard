@@ -1,6 +1,6 @@
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 475px) {
     
     .search{
         display: none;
@@ -93,7 +93,41 @@
        margin-top: -5px;
     }
 
-    
+    .content-footer{
+        display: block;
+    }
+
+    .sing-account, .sing-in, .icon-social{
+        margin: auto;
+    }
+
+    .community{
+        text-align: center;
+    }
+
+    .column{
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .foot-legal{
+        display: block;
+        text-align: center;
+    }
+
+    .link-legal{
+        display: block;
+        margin-bottom: 15px;
+    }
+
+    .copyright{
+        font-size: 12px;
+        margin-bottom: 15px;
+    }
+
+    .column a{
+        color: rgb(210, 210, 210);
+    }
 
 }
 
@@ -101,7 +135,7 @@
 
 
 
-@media screen and (min-width: 491px) and (max-width: 600px){
+@media screen and (min-width: 476px) and (max-width: 600px){
 
     .footer {
         position: absolute;

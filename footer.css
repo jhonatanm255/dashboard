@@ -154,3 +154,7 @@ a.sing-in:hover{
   .app-store a:hover{
     border: none;
   }
+
+  .column a{
+    color: rgb(210, 210, 210);
+  }
