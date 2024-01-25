@@ -98,9 +98,14 @@
     .sing-account, .sing-in, .icon-social{
         margin: auto;
     }
+    .icon-social{
+        width: 70%;
+    }
 
     .community{
-        text-align: center;
+       display: flex;
+       justify-content: center;
+       margin: 20px 0px;
     }
 
     .column{
@@ -254,6 +259,12 @@
         margin: auto;
     }
 
+    .community{
+        display: flex;
+        justify-content: center;
+        margin: 20px 0px;
+     }
+
 }
   
 
@@ -354,6 +365,11 @@
        margin-top: -5px;
     }
 
+    .content-footer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
     .sing-account{
         width: 100%;
     }
@@ -362,23 +378,22 @@
         width: 100%;
     }
 
+    .foot-legal{
+        display: grid;
+        grid-template-columns: repeat(1fr);
+        text-align: center;
+        justify-content: center;
+        row-gap: 20px;
+    }
+
     .icon-social{
         width: 100%;
         margin: auto;
     }
 
     .content-footer h3{
-        margin: 20px 0 30px 30px;
+        margin: 20px 0px;
     }
 
-
-
-    @media screen and (min-width: 1025px){
-
-        .footer{
-            width: 100%;
-        }
-
-    }
 }
 
