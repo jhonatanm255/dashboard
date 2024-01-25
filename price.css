@@ -13,9 +13,9 @@
 }
 
 .item-price {
-  margin: 5px 0;
   transition: all 0.5s ease;
   padding: 20px;
+  margin: auto;
 }
 
 .item-price:hover {

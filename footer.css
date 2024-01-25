@@ -90,8 +90,7 @@ a.sing-in:hover{
 
 .community{
  display: flex;
- margin-left: 50px;
- margin-top: 20px;
+  margin: 20px 0 20px 40px;
  font-size: 18px;
 }
 
