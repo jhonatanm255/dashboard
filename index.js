@@ -43,8 +43,6 @@ function createSocket(symbol, isDarkMode) {
     return { tradeSocket, tickerSocket };
 }
 
-
-
 // Lista de criptomonedas que deseas seguir
 const cryptoSymbols = ['ethusdt', 'btcusdt', 'adausdt', 'dotusdt', 'bnbusdt', 'solusdt','ltcusdt', 'avaxusdt'];
 
@@ -55,6 +53,67 @@ const cryptoSockets = {};
 cryptoSymbols.forEach(symbol => {
     cryptoSockets[symbol] = createSocket(symbol);
 });
+
+
+
+
+// TradingView Widget script
+{
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js';
+  
+    // Configuración del widget
+    script.innerHTML = JSON.stringify({
+      "symbol": "NASDAQ:AAPL",
+      "width": "100%",
+      "isTransparent": true,
+      "colorTheme": "dark",
+      "colorfont": "#fff",
+      "locale": "es"
+
+    });
+  
+    // Agregar script al contenedor
+    const container = document.getElementById('tradingview-widget-container');
+   
+  }
+
+
+  // DATOS ECONOMICOS DE CHILE
+
+  fetch("https://mindicador.cl/api")
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (dailyIndicators) {
+    document.getElementById("UF").innerHTML =
+      "$ " + dailyIndicators.uf.valor;
+
+    document.getElementById("UTM").innerHTML =
+      "$ " + dailyIndicators.utm.valor;
+
+      document.getElementById("IPC").innerHTML = 
+      '' + dailyIndicators.ipc.valor + ' %';
+      
+      document.getElementById("DolarO").innerHTML = 
+      '$ ' + dailyIndicators.dolar.valor;
+
+      document.getElementById("Euro").innerHTML = 
+      '$ ' + dailyIndicators.euro.valor;
+
+      document.getElementById("Imacec").innerHTML = 
+      '' + dailyIndicators.imacec.valor + ' %';
+  })
+  .catch(function (error) {
+    console.log("Requestfailed", error);
+  });
+  
+
+  
+
+
 
 
 

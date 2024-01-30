@@ -93,7 +93,9 @@
 }
 
 .orders {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
   justify-content: space-between;
   align-items: center;
 }
@@ -152,7 +154,8 @@
 }
 
 .caja {
-  width: 215px;
+  width: auto;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -167,6 +170,10 @@
 
 .dark-mode .caja {
   background-color: var(--dark-mode-primary);
+}
+
+.dark-mode > .tradingview-widget-container{
+  color: aliceblue;
 }
 
 .dark-mode .info {
