@@ -1,5 +1,6 @@
 
 
+
 const toggleButton = document.getElementById('toggle-mode');
 const body = document.body;
 
@@ -10,6 +11,7 @@ toggleButton.addEventListener('click', () => {
 
     const btnHamburguesa = document.getElementById('btn-h');
     const aside = document.querySelector('.light-mode'); 
+
 
     btnHamburguesa.addEventListener('click', () => {
         aside.classList.toggle('active-menu');
@@ -54,35 +56,7 @@ cryptoSymbols.forEach(symbol => {
     cryptoSockets[symbol] = createSocket(symbol);
 });
 
-
-
-
-// TradingView Widget script
-{
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.async = true;
-    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js';
-  
-    // Configuración del widget
-    script.innerHTML = JSON.stringify({
-      "symbol": "NASDAQ:AAPL",
-      "width": "100%",
-      "isTransparent": true,
-      "colorTheme": "dark",
-      "colorfont": "#fff",
-      "locale": "es"
-
-    });
-  
-    // Agregar script al contenedor
-    const container = document.getElementById('tradingview-widget-container');
-   
-  }
-
-
   // DATOS ECONOMICOS DE CHILE
-
   fetch("https://mindicador.cl/api")
   .then(function (response) {
     return response.json();
@@ -109,15 +83,38 @@ cryptoSymbols.forEach(symbol => {
   .catch(function (error) {
     console.log("Requestfailed", error);
   });
-  
 
-  
+// tradingview-widget.js
 
+document.addEventListener("DOMContentLoaded", function () {
+  const container = document.getElementById('tradingview-widget-container');
 
+  if (container) {
+    const isDarkMode = container.classList.contains('light-mode');
 
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
+    script.innerHTML = JSON.stringify({
+      "symbols": [
+        ["Apple", "AAPL|1D"],
+        ["Google", "GOOGL|1D"],
+        ["Microsoft", "MSFT|1D"],
+        ["Tesla", "TSLA|1D"],
+        ["Meta", "META|1D"],
+        ["Amazon", "AMZN|1D"],
+        ["Netflix", "NFLX|1D"]
+      ],
+      "chartOnly": false,
+      "width": "auto",
+      "height": 400,
+      "locale": "en",
+      "colorTheme": isDarkMode ? "light" : "dark",
+      // Otras configuraciones...
+      
+    });
 
-
-
-
-
-
+    container.appendChild(script);
+  }
+});

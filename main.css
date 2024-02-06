@@ -387,6 +387,7 @@ hr.thin {
 .data {
   display: flex;
   gap: 10px;
+  margin-bottom: 10px;
 }
 
 /*REMIDERS*/
@@ -452,4 +453,13 @@ hr.thin {
 .dark-mode .datos-3 {
   background: rgb(52, 52, 52);
   transition: all 0.5 ease;
+}
+
+.tradingview-widget-container{
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.dark-mode .tradingview-widget-container{
+  background-color: var(--dark-mode-primary);
 }

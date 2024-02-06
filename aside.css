@@ -8,7 +8,7 @@
 .aside {
   display: block;
   width: 20%;
-  height: 903px;
+  height: auto;
   background: var(--light-mode-primary);
   border-radius: 10px;
   margin: 10px 0 10px 0;
@@ -23,13 +23,9 @@
   background: var(--dark-mode-primary);
 }
 
-.item-list {
-  margin: 40px 0px;
-}
-
 .item-link {
   list-style: none;
-  margin: 10px 0;
+  margin: 5px 0 0 0;
   color: var(--dark-mode-primary);
   font-weight: 200;
   cursor: pointer;
