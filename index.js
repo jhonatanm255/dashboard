@@ -126,7 +126,7 @@ cryptoSymbols.forEach(symbol => {
             "height": 400,
             "colorTheme": "dark", 
             "autosize": false,
-            "showVolume": false,
+            "showVolume": true,
             "showMA": false,
             "hideDateRanges": false,
             "hideMarketStatus": false,
