@@ -8,13 +8,13 @@
   border-radius: 10px;
   box-shadow: var(--box-shadow);
   transition: all 0.5s ease;
-  height: 20vh;
+  height: 22vh;
   margin-bottom: 10px;
 }
 
 .item-price {
   transition: all 0.5s ease;
-  padding: 20px;
+  padding: 21px;
   margin: auto;
 }
 
@@ -29,11 +29,14 @@
   margin: auto;
   width: 30px;
   height: 30px;
+  margin-bottom: 3px;
 }
 
 .info-price {
+  font-family: roboto;
   font-size: 12px;
   font-weight: 300;
+  margin-bottom: 5px;
   text-align: center;
 }
 
