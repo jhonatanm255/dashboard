@@ -126,7 +126,7 @@ cryptoSymbols.forEach(symbol => {
             "height": 400,
             "colorTheme": "dark", 
             "autosize": false,
-            "showVolume": false,
+            "showVolume": true,
             "showMA": false,
             "hideDateRanges": false,
             "hideMarketStatus": false,
@@ -151,13 +151,51 @@ cryptoSymbols.forEach(symbol => {
                 "12m|1D",
                 "60m|1W",
                 "all|1M"
-            ]
+            ] 
         };
 
         script.innerHTML = JSON.stringify(widgetOptions);
+        container.appendChild(script);
+    }  
+});
+
+// tradingview-widget-setup.js
+
+document.addEventListener("DOMContentLoaded", function () {
+    const container = document.querySelector('.tradingview-widget-container');
+
+    if (container) {
+        const script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
+        script.async = true;
+        script.innerHTML = JSON.stringify({
+            "symbols": [
+                {
+                    "proName": "FOREXCOM:SPXUSD",
+                    "title": "S&P 500"
+                },
+                {
+                    "description": "Down Jones",
+                    "proName": "EASYMARKETS:DOWUSD"
+                },
+                {
+                    "description": "Nasdaq",
+                    "proName": "NASDAQ:NDAQ"
+                },
+                {
+                    "description": "Ibex 35",
+                    "proName": "TVC:IBEX35"
+                }
+            ],
+            "showSymbolLogo": true,
+            "isTransparent": false,
+            "displayMode": "adaptive",
+            "colorTheme": "dark",
+            "locale": "en"
+        });
 
         container.appendChild(script);
     }
 });
 
- 
