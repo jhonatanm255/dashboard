@@ -1,39 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard</title>
+  <!--ESTILOS-->
   <link rel="stylesheet" href="style.css">
+  <!--ENLACE JAVASCRIPT-->
   <script defer src="index.js"></script>
-  <!--Google Font-->
+  <!--ICONOS BOXICONN-->
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <!--GOOGLE FONT-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;1,100;1,200;1,500&family=Quicksand:wght@300;400;500&display=swap"
-    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,500;1,100;1,200;1,500&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!--FAVICON-->
   <link rel="icon" type="image/png" sizes="16x16"  href="/img/favicon.png">
+</head>
 
 <body class="light-mode">
   <div class="principal">
     <!--NAVIGATON-->
     <div class="navegacion light-nav grid-nav">
-      <div class="logo"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
-            <path
+      <div class="logo">
+        <a href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+              <path
               d="M2.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C3.25 2 2.49 2.759 2.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6zM13.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.332c-1.114 0-1.49-.362-1.49-1.456V4.352C13.51 2.759 12.75 2 11.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6" />
-          </svg></a></div>
+          </svg>
+        </a>
+      </div>
+      <!--SEARCH-->
       <div class="search">
         <input class="search" type="search" name="busqueda" id="busqueda" placeholder="Search"><button
           class="btn-search">Buscar</button>
       </div>
+      <!--NAV BAR-->
       <div class="nav-bar">
         <ul class="nav-item">
           <button class="btn-toggle" id="toggle-mode">
@@ -51,6 +58,8 @@
       </div>
     </div>
   </div>
+  
+
   <!--ASIDE-->
   <div class="content grid-content">
     <div class="light-mode aside active-menu">
@@ -97,6 +106,7 @@
                 d="M2 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5" />
             </svg></i></a><span class="lkn">Recent Orders</span></li>
       </ul>
+      <!--BOTON LOGOUT-->
       <ul>
         <li>
         <li class="item-link"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
@@ -124,7 +134,7 @@
           </div>
         </div>
       </div>
-      <!--TRADINGVIEW SUPERIOR-->
+      <!--WIDGET DE TRADINGVIEW SUPERIOR-->
       <div class="tradingview-widget-container">
         <div class="tradingview-widget-container__widget"></div>
     </div>
@@ -180,10 +190,7 @@
         </ul>
       </div>
       </di>
-      
-
     </div>
-
   </div>
 
   <!--RECENT ORDERS-->
@@ -238,7 +245,6 @@
     </div>
 
     <!--REMIDERS-->
-
     <div class="content-recent-2">
       <div class="header-2">
         <div class="item-1">
@@ -280,10 +286,10 @@
       </div>
     </div>
   </div>
-  
+
+  <!--WIDGET DE TRADINGVIEW PARA LAS ACCIONES DE ALGUNAS EMPRESAS-->
   <div id="tradingview-widget-container" class="tradingview-widget-container light-mode"></div>
-
-
+  <!--CONTENEDOR DE PRICE-->
   <div class="price">
     <div class="item-price" id="btcusdt">
       <img class="item-img" src="img/btc-logo.png" alt="btc-img">
@@ -341,7 +347,6 @@
       <p id="avaxusdt-volumen" class="info-price"></p>
     </div>
   </div>
-
 
   <!--FOOTER-->
   <div class="footer">

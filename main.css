@@ -172,10 +172,6 @@
   background-color: var(--dark-mode-primary);
 }
 
-.dark-mode > .tradingview-widget-container{
-  color: aliceblue;
-}
-
 .dark-mode .info {
   color: aliceblue;
 }
@@ -390,7 +386,7 @@ hr.thin {
   margin-bottom: 10px;
 }
 
-/*REMIDERS*/
+/* REMIDERS */
 
 .content-recent-2 {
   font-family: "sans-serif";
@@ -454,6 +450,8 @@ hr.thin {
   background: rgb(52, 52, 52);
   transition: all 0.5 ease;
 }
+
+/* TOGGLE DARK MODE WIDGET TRADINGVIEW */
 
 .tradingview-widget-container {
   border-radius: 10px;

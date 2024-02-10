@@ -1,13 +1,12 @@
 
 
-
+// FUNCION PARA ACTIVAR DARK MODE
 const toggleButton = document.getElementById('toggle-mode');
 const body = document.body;
 
 toggleButton.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
-    body.classList.toggle('light-mode');
-    
+    body.classList.toggle('light-mode'); 
 });
 
     const btnHamburguesa = document.getElementById('btn-h');
@@ -19,7 +18,7 @@ toggleButton.addEventListener('click', () => {
     });
 
 
-// ENDPOINT PARA EL PRECIO DE LAS CRIPTOS
+// ENDPOINT PARA EL PRECIO DE LAS CRIPTOMONEDAS
 function createSocket(symbol, isDarkMode) {
     const tradeSocket = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}@trade`);
     const tickerSocket = new WebSocket(`wss://stream.binance.com:9443/ws/${symbol.toLowerCase()}@ticker`);
@@ -46,7 +45,7 @@ function createSocket(symbol, isDarkMode) {
     return { tradeSocket, tickerSocket };
 }
 
-// Lista de criptomonedas que deseas seguir
+// LISTA DE SIMBOLOS DE CRIPTOMONEDAS
 const cryptoSymbols = ['ethusdt', 'btcusdt', 'adausdt', 'dotusdt', 'bnbusdt', 'solusdt','ltcusdt', 'avaxusdt'];
 
 // Objeto para almacenar todas las conexiones WebSocket
@@ -57,7 +56,7 @@ cryptoSymbols.forEach(symbol => {
     cryptoSockets[symbol] = createSocket(symbol);
 });
 
-  // DATOS ECONOMICOS DE CHILE
+  // FUNCION PARA MOSTRAR DATOS FINANCIEROS DE CHILE
   fetch("https://mindicador.cl/api")
   .then(function (response) {
     return response.json();
@@ -85,6 +84,8 @@ cryptoSymbols.forEach(symbol => {
     console.log("Requestfailed", error);
   });
 
+  /*OBTENER CONTENEDOR DEL WIDGET TRADINGVIEW PARA LAS ACCIONES DE EMPRESAS
+    --aqui represento los simbolos de las acciones de algunas empresas en el widget de TradingView-- */
   document.addEventListener("DOMContentLoaded", function () {
     const container = document.getElementById('tradingview-widget-container');
 
@@ -98,7 +99,7 @@ cryptoSymbols.forEach(symbol => {
         script.async = true;
         script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
 
-        // Configurar las opciones del widget
+        // OPCIONES DE CONFIGURACION DEL WIDGET TRADINGVIEW PARA LAS ACCIONES DE EMPRESAS
         const widgetOptions = {
             "symbols": [
                 ["Apple", "AAPL|1D"],
@@ -124,7 +125,7 @@ cryptoSymbols.forEach(symbol => {
             "locale": "en",
             "width": "auto",
             "height": 400,
-            "colorTheme": "dark", 
+            "colorTheme": "light", 
             "autosize": false,
             "showVolume": true,
             "showMA": false,
@@ -159,7 +160,7 @@ cryptoSymbols.forEach(symbol => {
     }  
 });
 
-// tradingview-widget-setup.js
+// WIDGET DE TRADINGVIEW PARA EL SP500, IBEX35, NASDAQ Y DOWN JONES
 
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('.tradingview-widget-container');
@@ -191,7 +192,7 @@ document.addEventListener("DOMContentLoaded", function () {
             "showSymbolLogo": true,
             "isTransparent": false,
             "displayMode": "adaptive",
-            "colorTheme": "dark",
+            "colorTheme": "light",
             "locale": "en"
         });
 
