@@ -84,6 +84,7 @@ cryptoSymbols.forEach(symbol => {
     console.log("Requestfailed", error);
   });
 
+
   /*OBTENER CONTENEDOR DEL WIDGET TRADINGVIEW PARA LAS ACCIONES DE EMPRESAS
     --aqui represento los simbolos de las acciones de algunas empresas en el widget de TradingView-- */
   document.addEventListener("DOMContentLoaded", function () {
@@ -91,7 +92,7 @@ cryptoSymbols.forEach(symbol => {
 
     if (container) {
         const body = document.body;
-        const isDarkMode = body.classList.contains('dark-mode');
+       
 
         // Crear el script del widget de TradingView
         const script = document.createElement('script');

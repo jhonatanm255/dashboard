@@ -40,6 +40,20 @@
   text-align: center;
 }
 
+.prc{
+  padding: 3px;
+  background-color: rgba(19, 104, 242, 0.191);
+  border: solid .5px rgb(23, 55, 239);
+  border-radius: 5px;
+}
+
+.dark-mode .prc{
+  padding: 3px;
+  background-color: rgba(38, 242, 19, 0.191);
+  border: solid .5px rgb(23, 239, 45);
+  border-radius: 5px;
+}
+
 .red {
   color: rgb(255, 0, 0);
   font-weight: 300;
