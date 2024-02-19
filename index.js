@@ -9,6 +9,7 @@ toggleButton.addEventListener('click', () => {
     body.classList.toggle('light-mode'); 
 });
 
+
     const btnHamburguesa = document.getElementById('btn-h');
     const aside = document.querySelector('.light-mode'); 
 
@@ -87,83 +88,113 @@ cryptoSymbols.forEach(symbol => {
 
   /*OBTENER CONTENEDOR DEL WIDGET TRADINGVIEW PARA LAS ACCIONES DE EMPRESAS
     --aqui represento los simbolos de las acciones de algunas empresas en el widget de TradingView-- */
-  document.addEventListener("DOMContentLoaded", function () {
-    const container = document.getElementById('tradingview-widget-container');
+  
 
-    if (container) {
-        const body = document.body;
-       
+    document.addEventListener("DOMContentLoaded", function () {
+        const container = document.getElementById('tradingview-widget-container');
+    
+        // Función para cargar el widget con el tema claro
+        function loadLightModeWidget() {
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
+    
+            const widgetOptions = {
+                // Configuración del widget para el tema claro
+                "symbols": [
+                    ["Apple", "AAPL|1D"],
+                    ["Google", "GOOGL|1D"],
+                    ["Microsoft", "MSFT|1D"],
+                    ["Tesla", "TSLA|1D"],
+                    ["Meta", "META|1D"],
+                    ["Amazon", "AMZN|1D"],
+                    ["Netflix", "NFLX|1D"],
+                    ["Nvidia", "NVDA|1D"],
+                    ["Amd", "AMD|1D"],
+                    ["Alibaba", "BABA|1D"],
+                    ["Paypal", "PYPL|1D"],
+                    ["Uber", "UBER|1D"],
+                    ["Intel", "INTC|1D"],
+                    ["Airbnb", "ABNB|1D"],
+                    ["Mercado Libre", "MELI|1D"],
+                    ["Sony", "SONY|1D"],
+                    ["Shopify", "SHOP|1D"],
+                    ["Dell", "DELL|1D"],
+                ],
+                "colorTheme": "light",
+                "width": "auto",
+                "height": 400,
+                // Otras opciones de configuración...
+            };
+    
+            script.innerHTML = JSON.stringify(widgetOptions);
+            container.innerHTML = ''; // Limpiar el contenedor antes de cargar el nuevo widget
+            container.appendChild(script);
+        }
+    
+        // Función para cargar el widget con el tema oscuro
+        function loadDarkModeWidget() {
+            const script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.async = true;
+            script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
+    
+            const widgetOptions = {
+                // Configuración del widget para el tema oscuro
+                "symbols": [
+                    ["Apple", "AAPL|1D"],
+                    ["Google", "GOOGL|1D"],
+                    ["Microsoft", "MSFT|1D"],
+                    ["Tesla", "TSLA|1D"],
+                    ["Meta", "META|1D"],
+                    ["Amazon", "AMZN|1D"],
+                    ["Netflix", "NFLX|1D"],
+                    ["Nvidia", "NVDA|1D"],
+                    ["Amd", "AMD|1D"],
+                    ["Alibaba", "BABA|1D"],
+                    ["Paypal", "PYPL|1D"],
+                    ["Uber", "UBER|1D"],
+                    ["Intel", "INTC|1D"],
+                    ["Airbnb", "ABNB|1D"],
+                    ["Mercado Libre", "MELI|1D"],
+                    ["Sony", "SONY|1D"],
+                    ["Shopify", "SHOP|1D"],
+                    ["Dell", "DELL|1D"],
+                ],
+                "colorTheme": "dark",
+                "width": "auto",
+                "height": 400,
+                "backgroundColor": "#1e1e1e"
+                // Otras opciones de configuración...
+            };
+    
+            script.innerHTML = JSON.stringify(widgetOptions);
+            container.innerHTML = ''; // Limpiar el contenedor antes de cargar el nuevo widget
+            container.appendChild(script);
+        }
+    
+        // Cargar inicialmente el widget con el tema claro
+        loadLightModeWidget();
+    
+        // Botón de toggle para cambiar entre los temas claro y oscuro
+        const toggleButton = document.getElementById('toggle-mode');
+        toggleButton.addEventListener('click', function() {
+            if (container.classList.contains('dark-mode')) {
+                loadLightModeWidget(); // Si está en modo oscuro, cargar el widget con el tema claro
+                container.classList.remove('dark-mode');
+            } else {
+                loadDarkModeWidget(); // Si está en modo claro, cargar el widget con el tema oscuro
+                container.classList.add('dark-mode');
+            }
+        });
+    });
+    
 
-        // Crear el script del widget de TradingView
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.async = true;
-        script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-symbol-overview.js';
-
-        // OPCIONES DE CONFIGURACION DEL WIDGET TRADINGVIEW PARA LAS ACCIONES DE EMPRESAS
-        const widgetOptions = {
-            "symbols": [
-                ["Apple", "AAPL|1D"],
-                ["Google", "GOOGL|1D"],
-                ["Microsoft", "MSFT|1D"],
-                ["Tesla", "TSLA|1D"],
-                ["Meta", "META|1D"],
-                ["Amazon", "AMZN|1D"],
-                ["Netflix", "NFLX|1D"],
-                ["Nvidia", "NVDA|1D"],
-                ["Amd", "AMD|1D"],
-                ["Alibaba", "BABA|1D"],
-                ["Paypal", "PYPL|1D"],
-                ["Uber", "UBER|1D"],
-                ["Intel", "INTC|1D"],
-                ["Airbnb", "ABNB|1D"],
-                ["Mercado Libre", "MELI|1D"],
-                ["Sony", "SONY|1D"],
-                ["Shopify", "SHOP|1D"],
-                ["Dell", "DELL|1D"],
-            ],
-            "chartOnly": false,
-            "locale": "en",
-            "width": "auto",
-            "height": 400,
-            "colorTheme": "light", 
-            "autosize": false,
-            "showVolume": true,
-            "showMA": false,
-            "hideDateRanges": false,
-            "hideMarketStatus": false,
-            "hideSymbolLogo": false,
-            "scalePosition": "right",
-            "scaleMode": "Normal",
-            "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
-            "fontSize": "10",
-            "noTimeScale": false,
-            "valuesTracking": "1",
-            "changeMode": "price-and-percent",
-            "chartType": "area",
-            "maLineColor": "#2962FF",
-            "maLineWidth": 1,
-            "maLength": 9,
-            "lineWidth": 2,
-            "lineType": 0,
-            "dateRanges": [
-                "1d|1",
-                "1m|30",
-                "3m|60",
-                "12m|1D",
-                "60m|1W",
-                "all|1M"
-            ] 
-        };
-
-        script.innerHTML = JSON.stringify(widgetOptions);
-        container.appendChild(script);
-    }  
-});
 
 // WIDGET DE TRADINGVIEW PARA EL SP500, IBEX35, NASDAQ Y DOWN JONES
 
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector('.tradingview-widget-container');
 
     if (container) {
@@ -200,5 +231,7 @@ document.addEventListener("DOMContentLoaded", function () {
         container.appendChild(script);
     }
 });
+
+*/
 
  
