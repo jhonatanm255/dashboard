@@ -8,16 +8,12 @@ toggleButton.addEventListener('click', () => {
     body.classList.toggle('dark-mode');
     body.classList.toggle('light-mode'); 
 });
-
-
     const btnHamburguesa = document.getElementById('btn-h');
     const aside = document.querySelector('.light-mode'); 
-
 
     btnHamburguesa.addEventListener('click', () => {
         aside.classList.toggle('active-menu');
     });
-
 
 // ENDPOINT PARA EL PRECIO DE LAS CRIPTOMONEDAS
 function createSocket(symbol, isDarkMode) {
@@ -39,7 +35,7 @@ function createSocket(symbol, isDarkMode) {
     tickerSocket.onmessage = (event) => {
         const tickerData = JSON.parse(event.data);
         const volumeChange = parseFloat(tickerData.P);
-        volumenSpan.innerHTML = `<span style="color: ${isDarkMode ? 'white' : 'black'};">Vol 24h:</span> ${volumeChange} %`;
+        volumenSpan.innerHTML = `<span style="color: ${isDarkMode ? 'white' : 'black'};"><span class="dark-mode">Vol 24h:</span></span> ${volumeChange} %`;
         volumenSpan.style.color = volumeChange > 0 ? (isDarkMode ? 'white' : 'green') : (volumeChange < 0 ? (isDarkMode ? 'white' : 'red') : '');
     };
 
@@ -193,45 +189,44 @@ cryptoSymbols.forEach(symbol => {
 
 
 // WIDGET DE TRADINGVIEW PARA EL SP500, IBEX35, NASDAQ Y DOWN JONES
+// document.addEventListener("DOMContentLoaded", function () {
+//     const container = document.querySelector('.tradingview-widget-container');
 
-/*document.addEventListener("DOMContentLoaded", function () {
-    const container = document.querySelector('.tradingview-widget-container');
+//     if (container) {
+//         const script = document.createElement('script');
+//         script.type = 'text/javascript';
+//         script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
+//         script.async = true;
+//         script.innerHTML = JSON.stringify({
+//             "symbols": [
+//                 {
+//                     "proName": "FOREXCOM:SPXUSD",
+//                     "title": "S&P 500"
+//                 },
+//                 {
+//                     "description": "Down Jones",
+//                     "proName": "EASYMARKETS:DOWUSD"
+//                 },
+//                 {
+//                     "description": "Nasdaq",
+//                     "proName": "NASDAQ:NDAQ"
+//                 },
+//                 {
+//                     "description": "Ibex 35",
+//                     "proName": "TVC:IBEX35"
+//                 }
+//             ],
+//             "showSymbolLogo": true,
+//             "isTransparent": false,
+//             "displayMode": "adaptive",
+//             "colorTheme": "dark",
+//             "backgroundColor": "#1e1e1e",
+//             "locale": "en"
+//         });
 
-    if (container) {
-        const script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js';
-        script.async = true;
-        script.innerHTML = JSON.stringify({
-            "symbols": [
-                {
-                    "proName": "FOREXCOM:SPXUSD",
-                    "title": "S&P 500"
-                },
-                {
-                    "description": "Down Jones",
-                    "proName": "EASYMARKETS:DOWUSD"
-                },
-                {
-                    "description": "Nasdaq",
-                    "proName": "NASDAQ:NDAQ"
-                },
-                {
-                    "description": "Ibex 35",
-                    "proName": "TVC:IBEX35"
-                }
-            ],
-            "showSymbolLogo": true,
-            "isTransparent": false,
-            "displayMode": "adaptive",
-            "colorTheme": "light",
-            "locale": "en"
-        });
+//         container.appendChild(script);
+//     }
+// });
 
-        container.appendChild(script);
-    }
-});
-
-*/
 
  

@@ -14,7 +14,8 @@
 
 .item-price {
   transition: all 0.5s ease;
-  padding: 21px;
+  padding: 19px;
+  border-radius: 10px;
   margin: auto;
 }
 
@@ -52,6 +53,10 @@
   background-color: rgba(38, 242, 19, 0.191);
   border: solid .5px rgb(23, 239, 45);
   border-radius: 5px;
+}
+
+.dark-mode span {
+  color: aliceblue;
 }
 
 .red {

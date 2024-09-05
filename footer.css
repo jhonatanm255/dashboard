@@ -121,6 +121,7 @@ a.sing-in:hover{
   .foot-legal a{
     margin-right: 15px;
     font-size: 12px;
+    border-bottom: solid 1px transparent;
   }
 
   .foot-legal a:hover{
